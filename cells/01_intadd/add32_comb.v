@@ -37,6 +37,7 @@ module add32_comb (
     // 源寄存器和目的寄存器有一个位有符号数时就将其转化为是有符号数
     assign result = 
         (is_signed  && (sum_signed_real[32] == 1'b1) && (sum_signed_real[31] == 1'b0)) ? 32'h80000000 :
+        (is_signed  && (sum_signed_real[32] == 1'b0) && (sum_signed_real[31] == 1'b1)) ? 32'h7FFFFFFF :
         (!is_signed && (sum_signed_real[32] == 1'b1)) ? 32'hFFFFFFFF :
         sum_lo;
             
