@@ -49,6 +49,7 @@ module stb_top #(
     output                          o_ur_re,
     output [UR_ADDR_WIDTH-1:0]      o_ur_addr,
     input  [DATA_WIDTH-1:0]         i_ur_rdata,
+    input  [4:0]                    i_smc_id,
 
     // AXI write request
     output [3:0]                    awid,

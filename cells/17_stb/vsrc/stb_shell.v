@@ -140,6 +140,7 @@ stb_top  #(
     .o_ur_re                      (w_ur_re),
     .o_ur_addr                    (w_ur_addr),
     .i_ur_rdata                   (w_ur_rdata),
+    .i_smc_id                     (5'd0),
 
     .awid                         (w_awid),
     .awvalid                      (w_awvalid),
